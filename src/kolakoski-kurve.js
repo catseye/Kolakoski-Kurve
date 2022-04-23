@@ -7,6 +7,8 @@ KolakoskiKurve = function() {
         this.ctx.strokeStyle = "black";
         this.ctx.globalCompositeOperation = 'source-over';
         this.dist = 5;
+        this.deltaTheta = 90;
+        this.setStyle('opaque');
 
         this.startIndex = 0;
         this.endIndex = 10000;
@@ -32,7 +34,7 @@ KolakoskiKurve = function() {
         }
         var $this = this;
         var stepFunction = function() {
-            $this.step();
+            $this.draw();
             setTimeout(stepFunction, 0);
         }
         this.intervalID = setTimeout(stepFunction, 0);
@@ -44,7 +46,7 @@ KolakoskiKurve = function() {
         var num = this.sequence[this.index];
 
         if (num === 1) {
-            // FD 10
+            // Go forward
             var rad = (this.theta / 360) * (Math.PI * 2);
 
             var dx = this.dist * Math.cos(rad);
@@ -61,8 +63,8 @@ KolakoskiKurve = function() {
             this.x = newX;
             this.y = newY;
         } else if (num === 2) {
-            // RT 90
-            this.theta += 90;
+            // Turn right
+            this.theta += this.deltaTheta;
             while (this.theta >= 360) this.theta -= 360;
         } else {
             alert('wtf');
@@ -82,9 +84,6 @@ KolakoskiKurve = function() {
         for (var j = 0; j < this.stepSize; j++) {
             this.step();
         }
-    };
-
-    this.update = function() {
     };
 
     /*
