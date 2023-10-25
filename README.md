@@ -2,9 +2,9 @@ Kolakoski Kurve
 ===============
 
 _Try it online_ [@ catseye.tc](https://catseye.tc/installation/Kolakoski_Kurve)
-| _See also:_ [Maze Clouds](https://github.com/catseye/Maze-Clouds#readme)
-∘ [Latcarf](https://github.com/catseye/Latcarf#readme)
-∘ [Erratic Turtle Graphics](https://github.com/catseye/Erratic-Turtle-Graphics#readme)
+| _See also:_ [Maze Clouds](https://codeberg.org/catseye/Maze-Clouds#maze-clouds)
+∘ [Latcarf](https://codeberg.org/catseye/Latcarf#latcarf)
+∘ [Erratic Turtle Graphics](https://codeberg.org/catseye/Erratic-Turtle-Graphics#erratic-turtle-graphics)
 
 ![screenshot](images/Kolakoski_Kurve.jpg?raw=true)
 ![screenshot of XOR version](images/Kolakoski_Kurve_XOR.jpg?raw=true)
